@@ -6,6 +6,8 @@
 
 Non-refactored codebase - icky and gross conditionals. Activity will be to refactor it to no longer have icky and gross conditionals and to put things into classes
 
+Quarters ARE images! for our capsule machine. For every image submitted, a corresponding random image will be dispensed
+
 ### States:
  - No Image to Upload
  - Image to Upload
