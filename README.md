@@ -11,7 +11,7 @@ Quarters ARE images! for our capsule machine. For every image submitted, a corre
 ### States:
  - No Image to Upload
  - Image to Uploads
- - Gumball Dispensed
+ - "Capsules" Dispensed (they are just images other people uploaded)
 
 ### Relevant Documentation
 - [Documentation](https://github.com/zeroflag/Teapot/blob/master/docs/UserGuide.md)
