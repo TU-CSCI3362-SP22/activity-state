@@ -12,6 +12,9 @@ Non-refactored codebase - icky and gross conditionals. Activity will be to refac
  - Out of gumballs
  - Gumball Dispensed
 
+### Relevant Documentation
+- [Documentation](https://github.com/zeroflag/Teapot/blob/master/docs/UserGuide.md)
+
 
 Izzy Thompson, Katie Browne, Turner Hall
 
