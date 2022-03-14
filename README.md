@@ -10,8 +10,7 @@ Quarters ARE images! for our capsule machine. For every image submitted, a corre
 
 ### States:
  - No Image to Upload
- - Image to Upload
- - Out of gumballs
+ - Image to Uploads
  - Gumball Dispensed
 
 ### Relevant Documentation
