@@ -14,6 +14,8 @@ Non-refactored codebase - icky and gross conditionals. Activity will be to refac
 
 ### Relevant Documentation
 - [Documentation](https://github.com/zeroflag/Teapot/blob/master/docs/UserGuide.md)
+ - Refer to [submitting data with POST](https://github.com/zeroflag/Teapot/blob/master/docs/UserGuide.md#handling-post-and-other-methods) and [submitting images in HTML forms](https://www.w3schools.com/tags/att_input_type_image.asp)
+ - [Example Teapot Webserver](https://github.com/zeroflag/Teapot/blob/master/source/Teapot-Library-Example/LibraryServer.class.st)
 
 
 Izzy Thompson, Katie Browne, Turner Hall
