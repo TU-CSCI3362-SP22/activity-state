@@ -22,6 +22,6 @@ Quarters ARE images! for our capsule machine. For every image submitted, a corre
  - [Example Teapot Webserver](https://github.com/zeroflag/Teapot/blob/master/source/Teapot-Library-Example/LibraryServer.class.st)
 
 
-Izzy Thompson, Katie Browne, Turner Hall
+Izzy Thompson, Katie Browne, [Turner Hall (contact info)](https://gnu3.xyz/)
 
 
