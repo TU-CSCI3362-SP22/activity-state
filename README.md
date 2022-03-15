@@ -1,4 +1,7 @@
 # State Pattern:
+
+![Whiteboard picture of UML diagram describing design goals](https://leo.omnius.zone/nextcloud/s/Pi6ZDNR6ewFRAp9/download/IMG_20220314_154454.jpg)
+
 ## Virtual capsule machine with user-uploadable capsule machine sets
 - Based off of example of gumball machine from Head First Design Patterns (Eric Freeman, Elisabeth Robson)
 - random number of uploaded image duplication in the the capsul machine, randomizing chances of user-uploaded "gumballs"
