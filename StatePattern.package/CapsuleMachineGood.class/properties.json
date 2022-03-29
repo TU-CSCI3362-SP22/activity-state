@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "StatePattern",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"library",
+		"ownedStrings",
+		"queuedStrings",
+		"state"
+	],
+	"name" : "CapsuleMachineGood",
+	"type" : "normal"
+}
