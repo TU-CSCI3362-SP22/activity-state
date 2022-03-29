@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "CapsuleMachineGood",
+	"super" : "CapsuleState",
 	"category" : "StatePattern",
 	"classinstvars" : [ ],
 	"pools" : [ ],

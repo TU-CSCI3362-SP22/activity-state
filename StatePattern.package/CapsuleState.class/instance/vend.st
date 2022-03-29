@@ -1,0 +1,3 @@
+action
+vend
+	self subclassResponsibility .
