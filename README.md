@@ -10,7 +10,7 @@ Non-refactored codebase - "Bad" codebase will not have an imaged state and only 
 
 ... the bad way (todo)
 
-[Now we're going to put all the behavior of a state into one class.](assets/now.png)
+![Now we're going to put all the behavior of a state into one class.](now.png)
 
 ... the good way (todo)
 
