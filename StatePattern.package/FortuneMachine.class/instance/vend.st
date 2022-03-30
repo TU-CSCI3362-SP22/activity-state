@@ -1,5 +1,5 @@
 actions
 vend
-	state = #Vended 	ifTrue: [ self denyTransaction: 'You already vended something. You are done. Go home.' ].
-	state = #HasInput 	ifTrue: [ self dispensePrizes. state := #Vended. ].
+	state = #Vending 	ifTrue: [ self dispensePrizes. state := #NoInput. ].
+	state = #HasInput 	ifTrue: [ self denyTransaction: 'You must submit your answers first.' ].
 	state = #NoInput 	ifTrue: [ self denyTransaction: 'Dispense your wisdom, or receive none.' ].

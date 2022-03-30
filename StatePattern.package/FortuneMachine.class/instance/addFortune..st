@@ -1,5 +1,5 @@
 actions
-submit: text
+addFortune: text
 	state = #HasInput 	ifTrue: [ inputs add: text. ] .
 	state = #NoInput 	ifTrue: [ inputs add: text. state := #HasInput. ].
-	state = #Vended	ifTrue: [ self denyTransaction: 'You already vended! You are done!' ].
+	state = #Vending	ifTrue: [ self denyTransaction: 'You''ve already submitted your fortunes!' ].

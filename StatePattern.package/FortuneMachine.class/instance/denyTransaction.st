@@ -1,3 +1,3 @@
 helper methods
 denyTransaction
-	Transcript show: 'Invalid transaction. Sad face.'.
+	self denyTransaction: 'Invalid transaction. Sad face.'.
