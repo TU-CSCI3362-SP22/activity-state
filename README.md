@@ -72,12 +72,12 @@ Wouldn't it work better if we were to take this one behavior of the fortune mach
    - Add a `forMachine: machine` constructor (i.e. class method) that creates a new state with `self new` and sets the machine instance variable.
 2. Now, `FortuneMachine` is going to represent the machine itself, and `FortuneState` will represent the machine's state.
    - To do this, the `state` instance variable on `FortuneMachine` will hold a FortuneState instead of a literal: `state := NoInput forMachine: self`.
-3. Change all the action methods from `FortuneMachine`. Now, all they should do is send on the function to their state. (i.e.  `submit: text` should do `state submit: text`).
-4. Create subclasses  of `FortuneState` for each possible state: `HasInput` `NoInput` and `Vending`
+3. Create subclasses  of `FortuneState` for each possible state: `HasInput` `NoInput` and `Vending`
    - In each state subclass, add the appropriate behavior for the action methods within the context of that state.
-   - Reference the original actions to see which states should be able to transition to other states, and which methods should cause them to transition.
+   - Reference the actions and helper methods to see which states should be able to transition to other states, and which methods should cause them to transition.
    - To transition to a new state, you will be calling `machine state: (StateName forMachine: machine)`. 
-7. Ensure that the action methods of the state subclasses correctly transition ex: `machine state: (Vended forMachine: machine)`
+4. Change all the action methods from `FortuneMachine`. Now, all they should do is send on the function to their state. (i.e.  `addFortune: text` should do `state addFortune: text`).
+5. Ensure that the action methods of the state subclasses correctly transition ex: `machine state: (Vended forMachine: machine)`
 
 Izzy Thompson, Katie Browne, [Turner Hall (contact info)](https://gnu3.xyz/)
 
