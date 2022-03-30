@@ -11,7 +11,7 @@ Submission test!
 
 ```smalltalk
 |machine|
-machine := CapsuleMachine new.
+machine := FortuneMachine new.
 machine submit: 'I am submitting to the machine'.
 machine vend.
 ```
@@ -20,14 +20,16 @@ Submit multiple strings!
 
 ```smalltalk
 |machine|
-machine := CapsuleMachine new.
+machine := FortuneMachine new.
 machine submit: 'I am submitting to the machine'.
 machine submit: 'I am another string in the machine'.
 machine vend.
 ```
 
-3.Boss wants tfure the fortune machine stands in line with *everyone's* values! This is going to mean adding a user-submittable word filtering system!
-(doing it bad)
+3.Boss wants to ensure the fortune machine stands in line with *everyone's* values! This is going to mean adding a user-submittable word filtering system!
+
+Look at all the conditionals in the FortuneMachine's action methods! We have to edit all those? ooof.
+ 
 
 
 This all seems pretty messy. Good thing our capsule machine runs pharo!
@@ -40,6 +42,12 @@ Wouldn't it work better if we were to take this one behavior of the capsulemachi
 
 ... the good way (todo)
 
+1. Create a `FortuneState` class with subclasses `HasInput` `wordFilter` `NoInput` and `Vended` seperate from `FortuneMachine`
+2. Delete all the action methods from `FortuneMachine`
+3. Add methods to `FortuneState` for the action methods `submit:` and `vend` which delegate subClassResponsibility
+4. In each state subclass, add the appropriate behavior for the action methods within the context of that state.
+    (You may want to create a Finite State Machine diagram of the FortuneMachine and ask us questions)
+5. Ensure that the action methods of the state subclasses correctly transition `machine state`
 
 ### States:
  - No String to Add
