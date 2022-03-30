@@ -10,6 +10,27 @@ Non-refactored codebase - "Bad" codebase will not have an imaged state and only 
 
 ... the bad way (todo)
 
+Inspect the results:
+
+Submission test!
+
+```smalltalk
+|machine|
+machine = CapsuleMachine new.
+machine submit: 'I am submitting to the machine'.
+machine vend.
+```
+
+Submit multiple strings!
+
+```smalltalk
+|machine|
+machine = CapsuleMachine new.
+machine submit: 'I am submitting to the machine'.
+machine submit: 'I am another string in the machine'.
+machine vend.
+```
+
 ![Now we're going to put all the behavior of a state into one class.](now.png)
 
 ... the good way (todo)
