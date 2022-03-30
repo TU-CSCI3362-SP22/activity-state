@@ -29,7 +29,7 @@ machine submit: 'I am another string in the machine'.
 machine vend.
 ```
 
-3.Boss wants to ensure the fortune machine stands in line with *everyone's* values! This is going to mean adding a user-submittable word filtering system!
+3.Boss wants to ensure the fortune machine stands in line with *everyone's* values! Only universally accepted wisdom should be dispensed! This is going to mean adding a user-submittable word filtering system! Create a word filter that censors our user-submitted filtered substrings from fortunes.
 
 Look at all the conditionals in the FortuneMachine's action methods! We have to edit all those? ooof.
  
