@@ -53,10 +53,10 @@ Look at all the conditionals in the FortuneMachine's action methods! We have to 
   - You will have to add another `ifTrue` check to each action method to make sure the program is behaving properly
   - In the `#WordFilter` state, `submit: text` should add text to inputs, just like it does in `#HasInput`.
   - However, in this state, `vend` should `addAll` the inputs to the `filteredWords` variable, and it should also change `state` to `#NoInput`.
-6. Implement your word filter in `dispensePrizes` on the library to ensure nobody gets a naughty fortune when the machine vends!
+5. Implement your word filter in `dispensePrizes` on the library to ensure nobody gets a naughty fortune when the machine vends!
   - Hint! Open Finder and pull up the OrderedCollection class to look for available methods that might help you :)
   - You can do this however you want -- fully deleting the string, censoring parts of it, replacing the whole string with a different one...etc, as long as you do not show offending strings.
-8. See if you can get the word filter to apply in the Playground, make sure to apply your word filter before starting to use `machine submit:`.
+6. See if you can get the word filter to apply in the Playground, make sure to apply your word filter before starting to use `machine submit:`.
  
 # Let's apply the State pattern!
 
@@ -81,7 +81,7 @@ Wouldn't it work better if we were to take this one behavior of the fortune mach
   ```
 4. Change all the action methods from `FortuneMachine`. Now, all they should do is send on the function to their state. (i.e.  `submit: text` should do `state submit: text`).
 5. Add methods to `FortuneState` for the action methods `submit:`, `vend`, and `wordFilterMode` which delegate subClassResponsibility
-5. In each state subclass, add the appropriate behavior for the action methods within the context of that state.
+6. In each state subclass, add the appropriate behavior for the action methods within the context of that state.
   - Reference the state diagram below to see which states should be able to transition to other states, and which methods should cause them to transition.
   - If someone tries to do something they can't do, such as going into `wordFilterMode` while they are in the state `HasInput`, it should send a `denyText` message to the machine instance variable (ex. `machine denyText: 'You have to make filters before submitting!`). This means that `HasInput`'s `wordFilterMode` method should deny the user.
   - To transition to a new state, you will be calling `machine state: (StateName forMachine: machine)`. This should be done according to the state diagram below.
