@@ -1,9 +1,10 @@
-# State Activity
+# State Activity - Universal Fortune Machine!
 
-1. What is the State Pattern?
+## What is the State Pattern?
 
+[State Pattern](https://www.google.com/url?q=https%3A%2F%2Flearning.oreilly.com%2Flibrary%2Fview%2Fhead-first-design%2F9781492077992%2Fch10.html%23sharpen_your_pencil-id000312&sa=D&sntz=1&usg=AOvVaw3IR7fqrzyzeeQdLOClNHn_)
 
-2. Introducing: The Fortune Machine!
+## Introducing: The Fortune Machine!
 
 At Incorporated Enterprises INC's R&D Laboratory a powerful new idea has emerged! A fortune machine *of the people*!
 In order to receive wisdom, you must first dispense it. The machine takes in submitted strings, one at a time, in an `input` queue. Each one representing your own personal words of wisdom. Upon vending you get the same number of strings that were submitted to the machine. Our engineers believe that by connecting this machine to the internet we could have *universal wisdom*.
@@ -28,16 +29,12 @@ machine submit: 'I am submitting to the machine'.
 machine submit: 'I am another string in the machine'.
 machine vend.
 ```
+## Revelation!
+Your boss just got back from his trip to Nepal and wants to ensure the fortune machine stands in line with *everyone's* values! Only universally accepted wisdom should be dispensed! This is going to mean adding a user-submittable word filtering system! Create a word filter that censors our user-submitted filter substrings from fortunes. Maybe replace the "unwise" inputted substring with asterisks?
 
-3.Boss just got back from his trip to Nepal and wants to ensure the fortune machine stands in line with *everyone's* values! Only universally accepted wisdom should be dispensed! This is going to mean adding a user-submittable word filtering system! Create a word filter that censors our user-submitted filter substrings from fortunes.
+Look at all the conditionals in the FortuneMachine's action methods! We have to edit all those? ooof. This all seems pretty messy. Good thing our fortune machine runs pharo!
 
-Look at all the conditionals in the FortuneMachine's action methods! We have to edit all those? ooof.
- 
-
-
-This all seems pretty messy. Good thing our fortune machine runs pharo!
-
-4. Let's apply the State pattern!
+# Let's apply the State pattern!
 
 ![Now we're going to put all the behavior of a state into one class.](now.png)
 
