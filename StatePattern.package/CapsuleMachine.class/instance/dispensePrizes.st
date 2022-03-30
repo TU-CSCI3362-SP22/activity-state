@@ -1,4 +1,6 @@
 helper methods
 dispensePrizes
-	prizes do: [:each | Transcript show: each ].
+	self preparePrizes.
+	Transcript show: 'PRIZES BELOW!!!!!!!'; cr.
+	prizes do: [:each | Transcript show: each. Transcript cr. ].
 	prizes removeAll.
