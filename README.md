@@ -65,12 +65,13 @@ Look at all the conditionals in the FortuneMachine's action methods! We have to 
 Wouldn't it work better if we were to take this one behavior of the fortune machine and encapsulate it, so we can avoid the messy inheritence situation from turning each state into a subclass of fortune machine or chaining we have the state pattern!
 
 1. Create a `FortuneState` class with subclasses `HasInput` `WordFilter` `NoInput` and `Vended` seperate from `FortuneMachine`
-2. Create and instantialize a new `FortuneMachine` as an instance variable of `FortuneState`, called `machine`
-3. Delete all the action methods from `FortuneMachine`
-4. Add methods to `FortuneState` for the action methods `submit:` and `vend` which delegate subClassResponsibility
-5. In each state subclass, add the appropriate behavior for the action methods within the context of that state
-6. Ensure that the action methods of the state subclasses correctly transition ex: `machine state: (Vended forMachine: machine)`
-7. The `vend` method in the WordFilter state should add any submitted strings to our `FortuneMachine`'s word filter!
+  - Now, `FortuneMachine` is going to represent the machine itself, and `FortuneState` will represent the machine's state.
+3. Create and instantialize a new `FortuneMachine` as an instance variable of `FortuneState`, called `machine`
+4. Delete all the action methods from `FortuneMachine`
+5. Add methods to `FortuneState` for the action methods `submit:` and `vend` which delegate subClassResponsibility
+6. In each state subclass, add the appropriate behavior for the action methods within the context of that state
+7. Ensure that the action methods of the state subclasses correctly transition ex: `machine state: (Vended forMachine: machine)`
+8. The `vend` method in the WordFilter state should add any submitted strings to our `FortuneMachine`'s word filter!
 
 ### States:
  - No String to add
