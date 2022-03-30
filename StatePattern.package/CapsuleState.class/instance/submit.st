@@ -1,3 +1,3 @@
 action
-submitText: text
+submit
 	self subclassResponsibility .
