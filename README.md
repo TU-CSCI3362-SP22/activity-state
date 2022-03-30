@@ -1,22 +1,17 @@
 # State Activity
 
-## Virtual capsule machine with user-editable text capsules
-- Based off of example of gumball machine from Head First Design Patterns (Eric Freeman, Elisabeth Robson)
- - The quarters in the machine are images and the capsules/"gumballs" are text strings. For every text string submitted, a corresponding random string will be dispensed.
-- random number of uploaded string duplication in the the capsule machine, randomizing chances of user-uploaded "capsules"
-- (Time Permitting) Rarity printout sheet with the rarest strings in the machine
+1. What is the State Pattern?
 
-Non-refactored codebase - "Bad" codebase will not have an imaged state and only support uploading one capsule to recieve one capsule. Activity will be to seperate the functionality of upload and dispense and add an imaged state, allowing uploading multiple images one at a time, to recieve more corresponfing dispensed images.
 
-... the bad way (todo)
+2. The Fortune Machine!
 
-Inspect the results:
+Inspect the function of the fortune machine!
 
 Submission test!
 
 ```smalltalk
 |machine|
-machine = CapsuleMachine new.
+machine := CapsuleMachine new.
 machine submit: 'I am submitting to the machine'.
 machine vend.
 ```
@@ -25,15 +20,31 @@ Submit multiple strings!
 
 ```smalltalk
 |machine|
-machine = CapsuleMachine new.
+machine := CapsuleMachine new.
 machine submit: 'I am submitting to the machine'.
 machine submit: 'I am another string in the machine'.
 machine vend.
 ```
 
+3.Boss wants tfure the fortune machine stands in line with *everyone's* values! This is going to mean adding a user-submittable word filtering system!
+(doing it bad)
+
+
+This all seems pretty messy. Good thing our capsule machine runs pharo!
+
+4. Let's apply the State pattern!
+
 ![Now we're going to put all the behavior of a state into one class.](now.png)
 
+Wouldn't it work better if we were to take this one behavior of the capsulemachine and encapsulate it, so we can avoid the messy inheritence situation from turning each state into a subclass of capsule machine or chaining we have the state pattern!
+
+1.
+2.
+3. Profit?
+
 ... the good way (todo)
+
+
 
 ### States:
  - No String to Add
