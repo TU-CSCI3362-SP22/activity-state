@@ -1,0 +1,3 @@
+action
+wordFilterMode 
+	self subclassResponsibility.

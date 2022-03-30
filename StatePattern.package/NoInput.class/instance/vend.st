@@ -1,3 +1,3 @@
 action
 vend
-	self denyText
+	self denyText: 'You have not put any fortunes in! :('.

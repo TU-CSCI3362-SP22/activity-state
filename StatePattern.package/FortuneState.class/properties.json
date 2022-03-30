@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "CapsuleState",
+	"super" : "Object",
 	"category" : "StatePattern",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "Vending",
+	"instvars" : [
+		"machine"
+	],
+	"name" : "FortuneState",
 	"type" : "normal"
 }

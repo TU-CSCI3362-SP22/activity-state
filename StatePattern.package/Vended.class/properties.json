@@ -1,16 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "FortuneState",
 	"category" : "StatePattern",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"library",
-		"prizes",
-		"inputs",
-		"state"
-	],
-	"name" : "CapsuleMachine",
+	"instvars" : [ ],
+	"name" : "Vended",
 	"type" : "normal"
 }

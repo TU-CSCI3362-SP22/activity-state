@@ -6,8 +6,12 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"machine"
+		"library",
+		"prizes",
+		"inputs",
+		"state",
+		"filteredWords"
 	],
-	"name" : "CapsuleState",
+	"name" : "FortuneMachine",
 	"type" : "normal"
 }

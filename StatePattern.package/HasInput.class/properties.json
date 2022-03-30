@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "CapsuleState",
+	"super" : "FortuneState",
 	"category" : "StatePattern",
 	"classinstvars" : [ ],
 	"pools" : [ ],
