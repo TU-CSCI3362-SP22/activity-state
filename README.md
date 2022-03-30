@@ -47,7 +47,7 @@ Wouldn't it work better if we were to take this one behavior of the capsulemachi
 3. Add methods to `FortuneState` for the action methods `submit:` and `vend` which delegate subClassResponsibility
 4. In each state subclass, add the appropriate behavior for the action methods within the context of that state.
     (You may want to create a Finite State Machine diagram of the FortuneMachine and ask us questions)
-5. Ensure that the action methods of the state subclasses correctly transition `machine state`
+5. Ensure that the action methods of the state subclasses correctly transition ex: `machine state: (Vended forMachine: machine)`
 
 ### States:
  - No String to Add
