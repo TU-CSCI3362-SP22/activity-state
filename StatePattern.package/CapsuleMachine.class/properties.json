@@ -1,11 +1,16 @@
 {
 	"commentStamp" : "",
-	"super" : "CapsuleMachineGood",
+	"super" : "Object",
 	"category" : "StatePattern",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "HasInput",
+	"instvars" : [
+		"library",
+		"prizes",
+		"inputs",
+		"state"
+	],
+	"name" : "CapsuleMachine",
 	"type" : "normal"
 }
