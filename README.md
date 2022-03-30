@@ -34,6 +34,14 @@ Your boss just got back from his trip to Nepal and wants to ensure the fortune m
 
 Look at all the conditionals in the FortuneMachine's action methods! We have to edit all those? ooof. This all seems pretty messy. Good thing our fortune machine runs pharo!
 
+1. Add a new instance variable to `FortuneMachine` called `filteredWords`
+2. Ensure you have accessors for `filteredWords`
+3. Add a new action method `wordFilterMode`, which will need several lines to check for state and transitions.
+  - experience disgust
+4. Edit the rest of the action methods to enter the new `#WordFilter` state
+6. Implement your word filter in `dispensePrizes` to ensure nobody gets a naughty fortune when the machine vends!
+7. See if you can get the word filter to apply in the Playground, make sure to apply your word filter before `machine submit:`.
+ 
 # Let's apply the State pattern!
 
 ![Now we're going to put all the behavior of a state into one class.](now.png)
