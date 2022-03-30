@@ -54,7 +54,13 @@ Look at all the conditionals in the FortuneMachine's action methods! We have to 
    - experience disgust. It looks bad, right?
 4. See if you can get the word filter to apply in the Playground, make sure to apply your word filter before starting to use `machine submit:`.
  
-# Let's apply the State pattern!
+### Takeways
+- The use of literals opens the possiblity of typo's - this would be solved by an `Enum` type in a typed language.
+- The order of evaluation in the action methods matters. Ew!
+- To add a state, we change every single action method. This violates the principle of `open to extension, closed to modification`. We should only have had to change the `submit` action!
+- It is generally a bad sign when your OO code has a lot of if methods. The object-oriented solution would be to use dynamic dispatch: create subclasses of `FotuneMachine` for each type of behavior, and then update the instance with the appropriate subclass. Unfortunately, this doesn't work since we want to preserve the library, prizes, and submitted fortunes between states!
+ 
+## Let's apply the State pattern!
 
 ![Now we're going to put all the behavior of a state into one class.](now.png)
 
