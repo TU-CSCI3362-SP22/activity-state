@@ -43,15 +43,16 @@ This all seems pretty messy. Good thing our fortune machine runs pharo!
 
 Wouldn't it work better if we were to take this one behavior of the fortune machine and encapsulate it, so we can avoid the messy inheritence situation from turning each state into a subclass of fortune machine or chaining we have the state pattern!
 
-1. Create a `FortuneState` class with subclasses `HasInput` `wordFilter` `NoInput` and `Vended` seperate from `FortuneMachine`
+1. Create a `FortuneState` class with subclasses `HasInput` `WordFilter` `NoInput` and `Vended` seperate from `FortuneMachine`
 2. Delete all the action methods from `FortuneMachine`
 3. Add methods to `FortuneState` for the action methods `submit:` and `vend` which delegate subClassResponsibility
 4. In each state subclass, add the appropriate behavior for the action methods within the context of that state.
     - (You may want to create a Finite State Machine diagram of the FortuneMachine and ask us questions)
 5. Ensure that the action methods of the state subclasses correctly transition ex: `machine state: (Vended forMachine: machine)`
+6. The `vend` method in the WordFilter state should add any submitted strings to our `FortuneMachine`'s word filter!
 
 ### States:
- - No String to Add
+ - No String to add
  - Strings to add
  - Word filter to add
  - string vended (they are just strings other people uploaded)
