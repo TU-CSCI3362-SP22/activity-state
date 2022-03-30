@@ -7,7 +7,7 @@
 ## Introducing: The Fortune Machine!
 
 At Incorporated Enterprises INC's R&D Laboratory a powerful new idea has emerged! A fortune machine *of the people*!
-In order to receive wisdom, you must first dispense it. The machine takes in submitted strings, one at a time, in an `input` queue. Each one representing your own personal words of wisdom. Upon vending you get the same number of strings that were submitted to the machine. Our engineers believe that by connecting this machine to the internet we could have *universal wisdom*.
+In order to receive wisdom, you must first dispense it. The machine takes in submitted strings, one at a time, in an `input` queue. Each one representing your own personal words of wisdom. Upon vending you get the same number of random fortune strings that were submitted to the machine. Our engineers believe that by connecting this machine to the internet we could have *universal wisdom*.
 
 Inspect the function of the fortune machine!
 
