@@ -38,19 +38,14 @@ This all seems pretty messy. Good thing our capsule machine runs pharo!
 
 Wouldn't it work better if we were to take this one behavior of the capsulemachine and encapsulate it, so we can avoid the messy inheritence situation from turning each state into a subclass of capsule machine or chaining we have the state pattern!
 
-1.
-2.
-3. Profit?
-
 ... the good way (todo)
-
 
 
 ### States:
  - No String to Add
  - Strings to add
- - Dispenser Denial ("you need to submit first!")
- - "Capsules" Dispensed (they are just strings other people uploaded)
+ - Word filter to add
+ - string vended (they are just strings other people uploaded)
 
 Izzy Thompson, Katie Browne, [Turner Hall (contact info)](https://gnu3.xyz/)
 
