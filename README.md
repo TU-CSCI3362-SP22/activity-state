@@ -3,7 +3,10 @@
 1. What is the State Pattern?
 
 
-2. The Fortune Machine!
+2. Introducing: The Fortune Machine!
+
+At Incorporated Enterprises INC's R&D Laboratory a powerful new idea has emerged! A fortune machine *of the people*!
+In order to receive widom, you must first dispense it. The machine takes in submitted strings, one at a time, in an `input` queue. Each one representing your own personal words of wisdom. Upon vending you get the same number of strings that were submitted to the machine. Our engineers believe that by connecting this machine to the internet we could have *universal wisdom*.
 
 Inspect the function of the fortune machine!
 
@@ -32,21 +35,19 @@ Look at all the conditionals in the FortuneMachine's action methods! We have to 
  
 
 
-This all seems pretty messy. Good thing our capsule machine runs pharo!
+This all seems pretty messy. Good thing our fortune machine runs pharo!
 
 4. Let's apply the State pattern!
 
 ![Now we're going to put all the behavior of a state into one class.](now.png)
 
-Wouldn't it work better if we were to take this one behavior of the capsulemachine and encapsulate it, so we can avoid the messy inheritence situation from turning each state into a subclass of capsule machine or chaining we have the state pattern!
-
-... the good way (todo)
+Wouldn't it work better if we were to take this one behavior of the fortune machine and encapsulate it, so we can avoid the messy inheritence situation from turning each state into a subclass of fortune machine or chaining we have the state pattern!
 
 1. Create a `FortuneState` class with subclasses `HasInput` `wordFilter` `NoInput` and `Vended` seperate from `FortuneMachine`
 2. Delete all the action methods from `FortuneMachine`
 3. Add methods to `FortuneState` for the action methods `submit:` and `vend` which delegate subClassResponsibility
 4. In each state subclass, add the appropriate behavior for the action methods within the context of that state.
-    (You may want to create a Finite State Machine diagram of the FortuneMachine and ask us questions)
+    - (You may want to create a Finite State Machine diagram of the FortuneMachine and ask us questions)
 5. Ensure that the action methods of the state subclasses correctly transition ex: `machine state: (Vended forMachine: machine)`
 
 ### States:
