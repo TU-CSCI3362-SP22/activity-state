@@ -69,7 +69,7 @@ Wouldn't it work better if we were to take this one behavior of the fortune mach
   - To do this, `FortuneMachine` will hold an instance variable that contains its current `FortuneState`, and the `FortuneState` will hold a class variable that contains the `FortuneMachine` it is associated with.
 3. Create and instantialize a new `FortuneMachine` as an instance variable of `FortuneState`, called `machine`. It will also need instance variables for `library`, `inputs`, `prizes`, and `filteredWords`.
   - This should be your initialize method:
-   ```
+   ```smalltalk
    initialize
 	super initialize.
 	state := NoInput forMachine: self.
