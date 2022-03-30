@@ -65,20 +65,36 @@ Look at all the conditionals in the FortuneMachine's action methods! We have to 
 Wouldn't it work better if we were to take this one behavior of the fortune machine and encapsulate it, so we can avoid the messy inheritence situation from turning each state into a subclass of fortune machine or chaining we have the state pattern!
 
 1. Create a `FortuneState` class with subclasses `HasInput` `WordFilter` `NoInput` and `Vended` seperate from `FortuneMachine`
-  - Now, `FortuneMachine` is going to represent the machine itself, and `FortuneState` will represent the machine's state.
-3. Create and instantialize a new `FortuneMachine` as an instance variable of `FortuneState`, called `machine`
-4. Delete all the action methods from `FortuneMachine`
-5. Add methods to `FortuneState` for the action methods `submit:` and `vend` which delegate subClassResponsibility
-6. In each state subclass, add the appropriate behavior for the action methods within the context of that state
+2. Now, `FortuneMachine` is going to represent the machine itself, and `FortuneState` will represent the machine's state.
+  - To do this, `FortuneMachine` will hold an instance variable that contains its current `FortuneState`, and the `FortuneState` will hold a class variable that contains the `FortuneMachine` it is associated with.
+3. Create and instantialize a new `FortuneMachine` as an instance variable of `FortuneState`, called `machine`. It will also need instance variables for `library`, `inputs`, `prizes`, and `filteredWords`.
+  - This should be your initialize method:
+   ```
+   initialize
+	super initialize.
+	state := NoInput forMachine: self.
+	library := OrderedCollection withAll: #('fortune 1' 'fortune 2' 'sdfbsdg' 'dskjvghdfskjg').
+	inputs := OrderedCollection new.
+	prizes := OrderedCollection new.
+	filteredWords := OrderedCollection new.
+	^ self.
+  ```
+4. Change all the action methods from `FortuneMachine`. Now, all they should do is send on the function to their state. (i.e.  `submit: text` should do `state submit: text`).
+5. Add methods to `FortuneState` for the action methods `submit:`, `vend`, and `wordFilterMode` which delegate subClassResponsibility
+5. In each state subclass, add the appropriate behavior for the action methods within the context of that state.
+  - Reference the state diagram below to see which states should be able to transition to other states, and which methods should cause them to transition.
+  - If someone tries to do something they can't do, such as going into `wordFilterMode` while they are in the state `HasInput`, it should send a `denyText` message to the machine instance variable (ex. `machine denyText: 'You have to make filters before submitting!`). This means that `HasInput`'s `wordFilterMode` method should deny the user.
+  - To transition to a new state, you will be calling `machine state: (StateName forMachine: machine)`. This should be done according to the state diagram below.
 7. Ensure that the action methods of the state subclasses correctly transition ex: `machine state: (Vended forMachine: machine)`
-8. The `vend` method in the WordFilter state should add any submitted strings to our `FortuneMachine`'s word filter!
+8. The `vend` method in the WordFilter state should add any submitted strings to our `FortuneMachine`'s word filter! All behavior should be the same as your earlier version.
 
 ### States:
- - No String to add
- - Strings to add
- - Word filter to add
- - string vended (they are just strings other people uploaded)
+ - No String to add (`NoInput`)
+ - Strings to add (`HasInput`)
+ - Word filter to add (`WordFilter`)
+ - Fortunes vended (`Vended`) 
  ![State diagram](https://media.discordapp.net/attachments/321782818625814528/958769172517650502/adfsadfdsfsdf.jpg)
+ - example: when you are in `NoInput` and you call `submit: text`, it should (along with any other behavior) transition to the `HasInput` state by calling `machine state: (HasInput forMachine: machine)`.
 
 Izzy Thompson, Katie Browne, [Turner Hall (contact info)](https://gnu3.xyz/)
 
