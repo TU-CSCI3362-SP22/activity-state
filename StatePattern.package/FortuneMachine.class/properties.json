@@ -9,8 +9,9 @@
 		"library",
 		"prizes",
 		"inputs",
-		"state"
+		"state",
+		"filteredWords"
 	],
-	"name" : "CapsuleMachine",
+	"name" : "FortuneMachine",
 	"type" : "normal"
 }
