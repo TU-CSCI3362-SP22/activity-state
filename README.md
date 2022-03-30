@@ -52,7 +52,7 @@ Look at all the conditionals in the FortuneMachine's action methods! We have to 
      - Suggestion: add a helper method that checks the submitted fortunes and returns a boolean.
      - Hint! Open Finder and pull up the OrderedCollection class to look for available methods that might help you :)
    - experience disgust. It looks bad, right?
-4. See if you can get the word filter to apply in the Playground, make sure to apply your word filter before starting to use `machine submit:`.
+4. See if you can get the word filter to apply in the Playground. See what happens if you say "Don't be sad, be glad" as an input!
  
 ### Takeways
 - The use of literals opens the possiblity of typo's - this would be solved by an `Enum` type in a typed language.
