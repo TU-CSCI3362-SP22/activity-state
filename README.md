@@ -39,8 +39,9 @@ Look at all the conditionals in the FortuneMachine's action methods! We have to 
 3. Add a new action method `wordFilterMode`, which will need several lines to check for state and transitions.
   - experience disgust
 4. Edit the rest of the action methods to enter the new `#WordFilter` state
-6. Implement your word filter in `dispensePrizes` to ensure nobody gets a naughty fortune when the machine vends!
-7. See if you can get the word filter to apply in the Playground, make sure to apply your word filter before `machine submit:`.
+6. Implement your word filter in `dispensePrizes` on the library to ensure nobody gets a naughty fortune when the machine vends!
+  - Hint! Open Finder and pull up the OrderedCollection class to look for available methods that might help you :)
+8. See if you can get the word filter to apply in the Playground, make sure to apply your word filter before `machine submit:`.
  
 # Let's apply the State pattern!
 
