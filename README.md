@@ -53,6 +53,7 @@ Wouldn't it work better if we were to take this one behavior of the fortune mach
  - Strings to add
  - Word filter to add
  - string vended (they are just strings other people uploaded)
+ ![State diagram](https://media.discordapp.net/attachments/321782818625814528/958769172517650502/adfsadfdsfsdf.jpg)
 
 Izzy Thompson, Katie Browne, [Turner Hall (contact info)](https://gnu3.xyz/)
 
