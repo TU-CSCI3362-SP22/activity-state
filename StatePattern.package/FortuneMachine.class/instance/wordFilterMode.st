@@ -1,3 +1,3 @@
 action
 wordFilterMode 
-	self subclassResponsibility.
+	state wordFilterMode.
